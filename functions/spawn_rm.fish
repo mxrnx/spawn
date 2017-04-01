@@ -1,10 +1,10 @@
-function spawn --description 'spawn a file from template'
+function spawn_rm --description 'remove a file from the list of templates'
 	set spawndir (string join '' '/home/' (whoami) '/.config/fisherman/spawn')
 	if not test -e $spawndir
 		mkdir $spawndir
 	end
 	if test -z $argv[1]
-		echo 'Usage: spawn <template name> [optional new name]'
+		echo 'Usage: spawn_rm <filename>'
 		return
 	end
 	set template (string join '/' $spawndir $argv[1])
@@ -12,5 +12,5 @@ function spawn --description 'spawn a file from template'
 		echo 'Template does not exist'
 		return
 	end
-	cp $template (string join '/' (pwd) $argv[(count $argv)])
+	rm $template
 end
