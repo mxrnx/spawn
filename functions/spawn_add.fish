@@ -12,5 +12,4 @@ function spawn_add --description 'add a file to the list of templates'
 		return
 	end
 	cp $argv[1] (string join '/' $spawndir $argv[(count $argv)])
-	echo $spawndir
 end
