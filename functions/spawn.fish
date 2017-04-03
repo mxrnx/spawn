@@ -1,5 +1,5 @@
 function spawn --description 'spawn a file from template'
-	set spawndir (string join '' '/home/' (whoami) '/.config/fisherman/spawn')
+	set -l spawndir (string join '' '/home/' (whoami) '/.config/fisherman/spawn/templates')
 	if not test -e $spawndir
 		mkdir $spawndir
 	end
@@ -7,7 +7,7 @@ function spawn --description 'spawn a file from template'
 		echo 'Usage: spawn <template name> [optional new name]'
 		return
 	end
-	set template (string join '/' $spawndir $argv[1])
+	set -l template (string join '/' $spawndir $argv[1])
 	if not test -e $template
 		echo 'Template does not exist'
 		return
