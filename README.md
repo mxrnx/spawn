@@ -2,7 +2,7 @@
 Template spawning for fish.
 
 ## Install
-### With fisherman
+### With [fisherman](https://github.com/fisherman/fisherman)
 Easy: `fisher knarka/spawn`
 
 ### Manually
