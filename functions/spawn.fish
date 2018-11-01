@@ -1,5 +1,5 @@
 function spawn --description 'spawn a file from template'
-	set -l spawndir (string join '' $HOME '/.config/fisherman/spawn/templates')
+	set -l spawndir (string join '' $HOME '/.config/fisher/github.com/knarka/spawn/templates')
 	set -l usage "Usage: spawn <template name> [optional new name]"\n"OR spawn -a <file to template> [optional new name]"\n"OR spawn -d <template name>"
 	if not test -e $spawndir
 		mkdir $spawndir
