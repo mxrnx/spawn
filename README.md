@@ -3,7 +3,7 @@ Template spawning for fish.
 
 ## Install
 ### With [fisher](https://github.com/fisherman/fisherman)
-Easy: `fisher knarka/spawn`
+Easy: `fisher add knarka/spawn`
 
 ### Manually
 Copy this repository's functions/spawn.fish to your .config/fish/functions/ folder
